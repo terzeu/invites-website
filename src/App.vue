@@ -15,7 +15,7 @@ export default {
   components: {
     Gaba,
     Chaybs,
-    HelloWorld,
+    HelloWorld
   }
 }
 </script>
