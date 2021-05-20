@@ -1,10 +1,8 @@
 <template>
+  <Chaybs nomeDasCapiva="capivilda" descricao="BRABONAAAA" idade="10" :tipoanu="true"/>
   <img src="./assets/capivara.png" alt="" srcset="">
-  <Chaybs msg="tem que retornar string aq porra" :numero="25" />
-  <img  alt="Pegasus assustado" src="./assets/proterzeu.png">
+  <Chaybs nomeDasCapiva="juranilda" descricao="DOCIL E CALMA" idade="15" :tipoanu="false"/>
   <Gaba msg="É HORA DO DUELO?" :numero="27"/>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 <script>
 import HelloWorld from './components/HelloWorld.vue'

@@ -1,26 +1,53 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>{{ numero }}</h2>
+    <h1 v-if="tipoanu">{{anuncio}}</h1>
+    <hr>
+    <h2>{{nomeDasCapiva}}</h2>
+    <p>{{descricao}}</p>
+    <p>{{`esta capivara tem ${idade} Anos`}}</p>
   </div>
 </template>
 <script>
 export default {
-  name: 'Chaybs',
+  data() {
+    return { 
+    anuncio:'capivaras em breve de background',
+    }
+  },
   props: {
-    msg: {
-      type: String,
-      required: true 
-    },
-    numero :Number, 
+    nomeDasCapiva: String,
+    descricao: String,
+    idade: Number,
+    cliente: Object,
+    tipoanu: Boolean
+  },
+  mounted() {
+    this.alertProTerzeu()
+
+  },
+  methods: {
+    alertProTerzeu: () => {
+      window.alert('me desculpe pela merda lineu :(.')
+    }
   }
 }
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+h1{
+  background-color: aqua;
+  border-style: dotted;
+  border-width: thick;
+  border-color: green;
 }
+h2 {
+  background-color: pink;
+  margin: 40px 0 0;
+  padding: 100px;
+}
+#props{
+  color: #42b983;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
