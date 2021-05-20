@@ -4,14 +4,14 @@
     <hr>
     <h2>{{nomeDasCapiva}}</h2>
     <p>{{descricao}}</p>
-    <p>{{`esta capivara tem ${idade} Anos`}}</p>
+    <p @click="aumentaIdadeDaJessica">{{`esta capivara tem ${idade} Anos`}}</p>
   </div>
 </template>
 <script>
 export default {
   data() {
-    return { 
-    anuncio:'capivaras em breve de background',
+    return {
+      anuncio:'capivaras em breve de background',
     }
   },
   props: {
@@ -21,13 +21,19 @@ export default {
     cliente: Object,
     tipoanu: Boolean
   },
-  mounted() {
-    this.alertProTerzeu()
-
-  },
   methods: {
     alertProTerzeu: () => {
       window.alert('me desculpe pela merda lineu :(.')
+    },
+    aumentaIdadeDaJessica() {
+      this.$emit('aumentaIdadeDaJessica')
+    }
+  },
+  watch: {
+    idade(novoValor) {
+      if (novoValor === 15) {
+        console.log('vc é uma mocinha')
+      }
     }
   }
 }

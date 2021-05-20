@@ -19,16 +19,31 @@
 export default {
   name: 'Gaba',
   created(){
-    console.log(this.numero),
-    console.log(this.msg),
-    console.log(this.Letra),
-    console.log(this.mudaFrase)
+    let frutas = [
+      {
+        name: 'banana',
+        peso: 3,
+        validade: '2010-04-02'
+      },
+      {
+        name: 'pera',
+        peso: 2,
+        validade: '2011-04-02'
+      },
+      {
+        name: 'maça',
+        peso: 1,
+        validade: '2013-04-02'
+      }
+    ]
+    let nomeDasFrutas = frutas.find(fruta => fruta.peso < 3)
+    console.log('nomeDasFrutas', nomeDasFrutas)
   },
   methods: {
-      calculodoresto(){
-       const resultadoResto = this.numero % 2
-        return resultadoResto
-      }
+    calculodoresto(){
+      const resultadoResto = this.numero % 2
+      return resultadoResto
+    }
   },
   computed:{
     confereNumero() {
