@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1 v-if="tipoanu === true">{{anuncio}}</h1>
+    <h1 v-if="tipoanu">{{anuncio}}</h1>
     <hr>
     <h2>{{nomeDasCapiva}}</h2>
     <p>{{descricao}}</p>
@@ -9,8 +9,8 @@
 </template>
 <script>
 export default {
-   data (){
-    return{ 
+  data() {
+    return { 
     anuncio:'capivaras em breve de background',
     }
   },
@@ -20,6 +20,15 @@ export default {
     idade: Number,
     cliente: Object,
     tipoanu: Boolean
+  },
+  mounted() {
+    this.alertProTerzeu()
+
+  },
+  methods: {
+    alertProTerzeu: () => {
+      window.alert('me desculpe pela merda lineu :(.')
+    }
   }
 }
 </script>
