@@ -1,8 +1,8 @@
 <template>
   <img src="./assets/capivara.png" alt="" srcset="">
-  <Chaybs msg="tem que retornar string aq porra" numero="25" />
+  <Chaybs msg="tem que retornar string aq porra" :numero="25" />
   <img  alt="Pegasus assustado" src="./assets/proterzeu.png">
-  <Gaba msg="É HORA DO DUELO" :numero="24"/>
+  <Gaba msg="É HORA DO DUELO?" :numero="27"/>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
