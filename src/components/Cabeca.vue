@@ -3,7 +3,7 @@
     <nav>
       <p>Formatura</p>
       <ul>
-        <a href="localhost:8080"><li>inicio</li></a>
+        <!--<a href="localhost:8080"><li>inicio</li></a>!-->
         <li>local</li>
          <li>confirmar presença</li>
       </ul>
@@ -16,7 +16,7 @@ export default{
 }
 </script>
 
-<style lang="scss" >
+<style>
 
 body{
   height: calc(100vh - 150px);

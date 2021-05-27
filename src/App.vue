@@ -9,11 +9,11 @@ export default {
 
   components: {
     Cabeca
-    
+  
   }
 }
 </script>
-<style lang="scss">
+<style>
 #app {
   
   -webkit-font-smoothing: antialiased;
