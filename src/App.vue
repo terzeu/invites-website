@@ -13,9 +13,10 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="scss"> 
+@import "./assets/app.scss";
 #app {
-  
+  font-family: 'Sofia';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

@@ -24,8 +24,9 @@ body{
   background: no-repeat center/cover url('../assets/images/madeira.jpg');
   
 }
+
 .cabess{
-  background: rgba(255, 192, 203, 0.63);  
+  background: rgba(255, 192, 203, 0.514);  
   font-size: 25px;
   margin-top: -69px;
   cursor: pointer;
