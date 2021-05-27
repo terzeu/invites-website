@@ -21,7 +21,7 @@ export default{
 body{
   height: calc(100vh - 150px);
   margin: 0;
-  background: no-repeat center/cover url('../assets/images/madeira.jpg');
+  background: no-repeat center/cover url('./assets/images/madeira.jpg');
   
 }
 .cabess{
