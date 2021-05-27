@@ -1,25 +1,21 @@
 <template>
-  <Chaybs nomeDasCapiva="capivilda" descricao="BRABONAAAA" idade="10" :tipoanu="true"/>
-  <img src="./assets/capivara.png" alt="" srcset="">
-  <Chaybs nomeDasCapiva="juranilda" descricao="DOCIL E CALMA" idade="15" :tipoanu="false"/>
-  <Gaba msg="É HORA DO DUELO?" :numero="27"/>
+
+  <cabeca/>
 </template>
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Gaba from './components/Gaba.vue'
-import Chaybs from './components/Chaybs'
+import Cabeca from './components/Cabeca.vue'
 export default {
   name: 'App',
+
   components: {
-    Gaba,
-    Chaybs,
-    HelloWorld
+    Cabeca
+    
   }
 }
 </script>
-<style>
+<style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
