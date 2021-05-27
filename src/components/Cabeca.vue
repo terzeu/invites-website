@@ -3,7 +3,7 @@
     <nav>
       <p>Formatura</p>
       <ul>
-        <!--<a href="localhost:8080"><li>inicio</li></a>!-->
+        <a href="localhost:8080"><li>inicio</li></a>
         <li>local</li>
          <li>confirmar presença</li>
       </ul>
@@ -21,11 +21,11 @@ export default{
 body{
   height: calc(100vh - 150px);
   margin: 0;
-  background: no-repeat center/cover url('./assets/images/madeira.jpg');
+  background: no-repeat center/cover url('../assets/images/madeira.jpg');
   
 }
 .cabess{
-  background: black;  
+  background: rgba(255, 192, 203, 0.63);  
   font-size: 25px;
   margin-top: -69px;
   cursor: pointer;
