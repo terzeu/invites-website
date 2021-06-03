@@ -1,12 +1,12 @@
 <template>
-  <cabeca/>
+  <Header/>
 </template>
 <script>
-import Cabeca from './components/Cabeca.vue'
+import Header from './components/Header'
 export default {
   name: 'App',
   components: {
-    Cabeca
+    Header
   }
 }
 </script>
