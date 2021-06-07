@@ -16,7 +16,7 @@ export default {
 <style lang="scss"> 
 @import "./assets/app.scss";
 body {
-  height: calc(100vh - 150px);
+  height: calc(100vh);
   margin: 0;
 }
 #app {
@@ -25,6 +25,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

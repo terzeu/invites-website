@@ -21,7 +21,6 @@ export default{
   width: 100%;
   background: rgba(255, 192, 203, 0.514);  
   font-size: 25px;
-  margin-top: -69px;
   .header-nav {
     display: flex;
     justify-content: space-around;
