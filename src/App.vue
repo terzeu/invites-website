@@ -1,12 +1,15 @@
 <template>
   <Header/>
+  <Home/>
 </template>
 <script>
 import Header from './components/Header'
+import Home from './components/Home.vue'
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Home
   }
 }
 </script>
@@ -15,7 +18,6 @@ export default {
 body {
   height: calc(100vh - 150px);
   margin: 0;
-  background: no-repeat center/cover url('./assets/images/madeira.jpg');
 }
 #app {
   font-family: 'Sofia';
