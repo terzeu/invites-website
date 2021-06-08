@@ -1,21 +1,23 @@
 <template>
   <Header/>
+  <Home/>
 </template>
 <script>
 import Header from './components/Header'
+import Home from './views/Home.vue'
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Home
   }
 }
 </script>
 <style lang="scss"> 
 @import "./assets/app.scss";
 body {
-  height: 100vh;
+  height: 100%;
   margin: 0;
-  background: no-repeat center/cover url('./assets/images/madeira.jpg');
 }
 #app {
   font-family: 'Sofia';
@@ -23,5 +25,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
 }
 </style>

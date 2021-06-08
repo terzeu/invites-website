@@ -19,7 +19,7 @@ export default{
 .header-component {
   position: fixed;
   width: 100%;
-  background: rgba(255, 192, 203, 0.514);  
+  background: rgba(255, 192, 203, 0.884);  
   font-size: 25px;
   .header-nav {
     display: flex;
