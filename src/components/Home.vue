@@ -1,11 +1,13 @@
 <template>
-  <div class="home-pag">       
-    <h2>Seja bem-vindo</h2>
-      <div class="paragr">
+  <div class="home-page">
+    <div class="home-content">
+      <h2 class="home-title">Seja bem-vindo</h2>
+      <div class="welcome-description">
         <p>Venha celebrar conosco a formatura de Gustavo e Valneide realizada no hotel fazenda pirapitinga no mês de julho! 🍺</p>
         <p>conto com você para comemorar essa grande conquista em nossas vidas. 🥃</p>
       </div>
-    </div>
+    </div>       
+  </div>
 </template>
 <script>
 export default {
@@ -13,13 +15,27 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.home-pag{
-    color: rgb(223, 223, 223);
-    font-size: 33px;
-    align-content: flex-end;
-    padding: 11%;
-    text-shadow: 2px 3px 5px black;
-    height: 100vh;
-    background: no-repeat center/cover url('../assets/images/madeira.jpg');    
+.home-page {
+  color: rgb(223, 223, 223);
+  font-size: 33px;
+  text-shadow: 2px 3px 5px black;
+  height: 100vh;
+  background: no-repeat center/cover url('../assets/images/madeira2.jpg');
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  .home-content {
+    margin-top: 89px;
+    .home-title {
+      margin: 0 0 30px 0;     
+    }
+    .welcome-description {
+      width: 600px;
+      p {
+        margin: 0;
+      }
+    }
+  }
 }   
 </style>
