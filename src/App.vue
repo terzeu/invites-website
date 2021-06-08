@@ -1,15 +1,18 @@
 <template>
   <Header/>
   <Home/>
+  <Location/>
 </template>
 <script>
 import Header from './components/Header'
 import Home from './views/Home.vue'
+import Location from './views/Location.vue'
 export default {
   name: 'App',
   components: {
     Header,
-    Home
+    Home,
+    Location
   }
 }
 </script>
