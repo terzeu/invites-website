@@ -13,7 +13,7 @@ export default {
 <style lang="scss"> 
 @import "./assets/app.scss";
 body {
-  height: calc(100vh);
+  height: 100vh;
   margin: 0;
   background: no-repeat center/cover url('./assets/images/madeira.jpg');
 }
