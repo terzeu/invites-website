@@ -1,25 +1,25 @@
 <template>
 <div class="location-start">
-  <h1>ONDE VAI SER</h1>
+  <h2 class="main-title">ONDE VAI SER</h2>
   <div class="location-page">
     <div class="location-info">
       <div class="location-data info-blocks">
-        <h2 class="title">
+        <h3 class="title">
           <font-awesome-icon icon="clock" class="icon" />QUANDO?
-        </h2>
-        <p>Quinta-feira, 08 de Setembro de 2022 a partir das 20:00</p>
+        </h3>
+        <p class="text">Quinta-feira, 31 de Julho de 2021 a partir das 20:00</p>
       </div>
       <div class="location-description info-blocks">
-        <h2 class="title">
+        <h3 class="title">
           <font-awesome-icon icon="location-arrow" class="icon" />AONDE?
-        </h2>
-        <p>Hotel Fazenda Pirapitinga, Luziânia GO 061</p>
+        </h3>
+        <p class="text">Hotel Fazenda Pirapitinga, Luziânia GO 061</p>
       </div>
     </div>
     <div class="location-map info-blocks">
-      <h2 class="title">
+      <h3 class="title">
         <font-awesome-icon icon="map" class="icon" />MAPA
-      </h2>
+      </h3>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3827.8455298836757!2d-48.0295705!3d-16.3818294!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935998f7285c0d95%3A0x920159d3a9c1cdf9!2sHotel%20Fazenda%20Pirapitinga!5e0!3m2!1spt-BR!2sbr!4v1623353362641!5m2!1spt-BR!2sbr"
         width="100%" height="300" style="border:0; border-radius:6px;"
@@ -47,12 +47,28 @@ export default {
   background: no-repeat center/cover url('../assets/images/woodnoflagleve.jpg');
   display: flex;
   flex-direction: column;
+  .main-title{
+    font-size: 64px;
+    margin-bottom: 60px;
+  }
   .location-page {
     display: flex;
     font-size: 30px;
     justify-content: center;
     .info-blocks {
+      .text{
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        margin-bottom: 60px;
+      }
       .title {
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        margin: 6px 0 14px 7px;
         color: #feda00;
         .icon {
           margin-right: 10px;
@@ -61,9 +77,6 @@ export default {
       width: 450px;
       text-align: start;
     }
-    .location-info {
-
-    }
   }
-}   
+}
 </style>
