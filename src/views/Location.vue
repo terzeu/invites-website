@@ -1,6 +1,6 @@
 <template>
   <div class="location-start">
-    <h1><font-awesome-icon icon="question-circle" />ONDE VAI SER<font-awesome-icon icon="question-circle" /></h1>
+    <h2><font-awesome-icon icon="question-circle" />ONDE VAI SER<font-awesome-icon icon="question-circle" /></h2>
     <div class="location-info">
       <div class="location-page">
         <div class="location-data">
@@ -14,7 +14,7 @@
       </div>
       <div class="location-map">
         <h2><font-awesome-icon icon="map" />MAPA</h2>
-        <p>INSERIR MAPA AQUI</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3827.8455298836757!2d-48.0295705!3d-16.3818294!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935998f7285c0d95%3A0x920159d3a9c1cdf9!2sHotel%20Fazenda%20Pirapitinga!5e0!3m2!1spt-BR!2sbr!4v1623353362641!5m2!1spt-BR!2sbr" width="200" height="200" style="border:20;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
   </div>
@@ -33,12 +33,12 @@ export default {
   color: rgb(223, 223, 223);
   font-size: 33px;
   text-shadow: 2px 3px 5px black;
-  height: 100vh;
+  height: 100%;
   background: no-repeat center/cover url('../assets/images/woodnoflagleve.jpg');
   display: flex;
   flex-direction: column;
   .location-info{
-    margin:  0px 250px 250px 250px;
+    margin:  0px 100px 0px 100px;
     display: flex;
     font-size: 30px;
     h2 {
