@@ -19,7 +19,7 @@ export default {
   color: rgb(223, 223, 223);
   font-size: 33px;
   text-shadow: 2px 3px 5px black;
-  height: 100%;
+  height: 100vh;
   background: no-repeat center/cover url('../assets/images/mainwood.jpg');
   display: flex;
   flex-direction: column; 
