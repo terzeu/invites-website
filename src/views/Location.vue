@@ -37,14 +37,14 @@ export default {
   background: no-repeat center/cover url('../assets/images/woodnoflagleve.jpg');
   display: flex;
   flex-direction: column;
-  .location-info{
+  .location-info {
     margin:  0px 100px 0px 100px;
     display: flex;
     font-size: 30px;
     h2 {
       color: #feda00;
     }
-    .location-page{
+    .location-page {
       display: flex;
       text-align: start;
       flex-direction: row;
