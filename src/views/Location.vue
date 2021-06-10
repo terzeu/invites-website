@@ -1,20 +1,20 @@
 <template>
   <div class="location-start">
-    <h2><font-awesome-icon icon="question-circle" />ONDE VAI SER<font-awesome-icon icon="question-circle" /></h2>
+    <h1><font-awesome-icon icon="question-circle" />ONDE VAI SER<font-awesome-icon icon="question-circle" /></h1>
     <div class="location-info">
       <div class="location-page">
         <div class="location-data">
-          <p><font-awesome-icon icon="clock" />QUANDO?<br>
-          Quinta-feira, 08 de Setembro de 2022 a partir das 20:00</p>
+          <h2><font-awesome-icon icon="clock" />QUANDO?</h2>
+          <p>Quinta-feira, 08 de Setembro de 2022 a partir das 20:00</p>
         </div>
         <div class="location-description">
-          <p><font-awesome-icon icon="location-arrow" />AONDE?<br>
-          Hotel Fazenda Pirapitinga, Luziânia GO 061</p>
+          <h2><font-awesome-icon icon="location-arrow" />AONDE?</h2>
+          <p>Hotel Fazenda Pirapitinga, Luziânia GO 061</p>
         </div>
       </div>
       <div class="location-map">
-        <p><font-awesome-icon icon="map" />MAPA<br>
-        INSERIR MAPA AQUI</p>
+        <h2><font-awesome-icon icon="map" />MAPA</h2>
+        <p>INSERIR MAPA AQUI</p>
       </div>
     </div>
   </div>
@@ -38,18 +38,18 @@ export default {
   display: flex;
   flex-direction: column;
   .location-info{
+    margin:  0px 250px 250px 250px;
     display: flex;
     font-size: 30px;
+    h2 {
+      color: #feda00;
+    }
     .location-page{
       display: flex;
       text-align: start;
-      flex-wrap: wrap;
-      align-content: stretch;
-      justify-content: flex-start;
-      align-items: baseline;
       flex-direction: row;
+      flex-wrap: wrap;
     }
-    
   }
 }   
 </style>
