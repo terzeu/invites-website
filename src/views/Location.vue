@@ -57,10 +57,8 @@ export default {
     justify-content: center;
     .info-blocks {
       .text{
-        margin-block-start: 0px;
-        margin-block-end: 0px;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
+        margin-block: 0;
+        margin-inline: 0;
         margin-bottom: 60px;
       }
       .title {
