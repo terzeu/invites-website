@@ -75,24 +75,24 @@ export default {
     .sucess {
       background-color: #07b307;
       border: #07b307;
-    }    
-    .sucess:hover {
-        background: #46a049;;
+      &:hover {
+        background: #46a049;
       }
+    }    
     .warning {
       background-color: #f9ce04;
       border: #f9ce04;
-    } 
-    .warning:hover {
+      &:hover {
         background: #e68a00;
       }
+    } 
     .danger {
       background-color: #e52729;
       border: #e52729;
-    }   
-    .danger:hover {
+      &:hover {
         background: #da190b;
       }
+    }   
   }            
 }   
 </style>
