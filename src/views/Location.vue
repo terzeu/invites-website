@@ -64,10 +64,6 @@ export default {
         margin-bottom: 60px;
       }
       .title {
-        margin-block-start: 0px;
-        margin-block-end: 0px;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
         margin: 6px 0 14px 7px;
         color: #feda00;
         .icon {
