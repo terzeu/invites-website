@@ -1,18 +1,21 @@
 <template>
   <Header/>
   <Home/>
+  <Location/>
   <Confirm/>
 </template>
 <script>
 import Header from './components/Header'
 import Confirm from './views/Confirm.vue'
 import Home from './views/Home.vue'
+import Location from './views/Location.vue'
 export default {
   name: 'App',
   components: {
     Header,
-    Home,
     Confirm
+    Home,
+    Location
   }
 }
 </script>
