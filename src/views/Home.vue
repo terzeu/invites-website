@@ -20,7 +20,7 @@ export default {
   font-size: 33px;
   text-shadow: 2px 3px 5px black;
   height: 100vh;
-  background: no-repeat center/cover url('../assets/images/madeira2.jpg');
+  background: no-repeat center/cover url('../assets/images/mainwood.jpg');
   display: flex;
   flex-direction: column; 
   align-items: center;
