@@ -1,5 +1,5 @@
 <template>
-<div class="location-start">
+<div id = "location-start" class="location-start">
   <h2 class="main-title">ONDE VAI SER</h2>
   <div class="location-page">
     <div class="location-info">
