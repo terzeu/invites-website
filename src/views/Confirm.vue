@@ -1,17 +1,17 @@
 <template>
-<div class="confirm-presence">
+<div id="confirm-presence" class="confirm-presence">
   <div class="text-title">
-    <h2>confirme sua presença</h2>
+    <h2>Confirme sua presença</h2>
   </div>  
-  <div class="date">
-    <span class="banner">30/07/2021</span> 
-    <span class="day">quinta feira as 15 horas</span> 
-  </div>    
+  <div class="banner">
+    <span class="text-date">30/07/2021</span>
+  </div>
+  <span class="text">Quinta-feira às 15 horas</span>     
   <div class="colls">
-    <p>Por favor, Selecione uma das 3 opções abaixo:</p>
+    <p>Por favor, selecione uma das 3 opções abaixo:</p>
   </div>  
   <div class="button-div">
-    <button class="buttons sucess">eu vou</button>
+    <button class="buttons success">eu vou</button>
     <button class="buttons warning">talvez</button>
     <button class="buttons danger">não vou</button>
   </div>   
@@ -32,33 +32,47 @@ export default {
   flex-direction: column; 
   align-items: center;
   justify-content: center;
-  .text-title {
-    color: #fff;
-  }
-  .date {     
+  color: #fff;
+  .banner {     
     display: flex;        
-    flex-direction: column;
-    align-content: center;
-    color: #fff;
-  }
-  .banner { 
+    flex-direction: column;  
     background: no-repeat center/cover url('../assets/images/ribbon.png');
-    display: flex;
-    justify-content: center;
-    line-height: 180px; 
-    font-size: 30px;  
-    background-size: contain;
-    background-position: 1 0 0 ;
-    height: 145px;
-    align-items: flex-end;       
-  }  
-  .colls {
-    color: #ffff;
+    justify-content: center; 
+    height: 130px;
+    width: 400px;
+    .text-date {   
+      font-size: 30px;
+      margin-bottom: 40px;
+    } 
   }
+  .text {
+    margin-top: 20px;
+  } 
   .button-div {
     display: flex;    
     justify-content: center; 
     .buttons {
+      &.success {
+      background-color: #07b307;
+      border: #07b307;
+      &:hover {
+        background: #46a049;
+      }
+    } 
+     &.warning {
+      background-color: #f9ce04;
+      border: #f9ce04;
+      &:hover {
+        background: #e68a00;
+      }
+    } 
+    &.danger {
+      background-color: #e52729;
+      border: #e52729;
+      &:hover {
+        background: #da190b;
+      }
+    }  
       display: flex;  
       text-transform: uppercase;
       align-items: center;
@@ -70,29 +84,8 @@ export default {
       border-color: #ffff;    
       margin: 9px 8px;       
       cursor: pointer;
-      font-family: 'arial'
-    }     
-    .sucess {
-      background-color: #07b307;
-      border: #07b307;
-      &:hover {
-        background: #46a049;
-      }
-    }    
-    .warning {
-      background-color: #f9ce04;
-      border: #f9ce04;
-      &:hover {
-        background: #e68a00;
-      }
-    } 
-    .danger {
-      background-color: #e52729;
-      border: #e52729;
-      &:hover {
-        background: #da190b;
-      }
-    }   
+      font-family: 'arial'     
+    }          
   }            
 }   
 </style>
