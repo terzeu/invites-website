@@ -2,18 +2,18 @@
   <Header/>
   <Home/>
   <Location/>
-  <Confirm/>
+  <Presence/>
 </template>
 <script>
 import Header from './components/Header'
-import Confirm from './views/Confirm.vue'
+import Presence from './views/Presence.vue'
 import Home from './views/Home.vue'
 import Location from './views/Location.vue'
 export default {
   name: 'App',
   components: {
     Header,
-    Confirm,
+    Presence,
     Home,
     Location
   }

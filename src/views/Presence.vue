@@ -35,14 +35,14 @@ export default {
   color: #fff;
   .banner {     
     display: flex;        
-    flex-direction: column;  
     background: no-repeat center/cover url('../assets/images/ribbon.png');
     justify-content: center; 
     height: 130px;
     width: 400px;
+    align-items: center;
     .text-date {   
       font-size: 30px;
-      margin-bottom: 40px;
+      margin-top: -45px;
     } 
   }
   .text {
@@ -53,22 +53,22 @@ export default {
     justify-content: center; 
     .buttons {
       &.success {
-      background-color: #07b307;
-      border: #07b307;
+        background-color: #07b307;
+        border: #07b307;
       &:hover {
         background: #46a049;
       }
     } 
-     &.warning {
-      background-color: #f9ce04;
-      border: #f9ce04;
+      &.warning {
+        background-color: #f9ce04;
+        border: #f9ce04;
       &:hover {
         background: #e68a00;
       }
     } 
-    &.danger {
-      background-color: #e52729;
-      border: #e52729;
+      &.danger {
+        background-color: #e52729;
+        border: #e52729;
       &:hover {
         background: #da190b;
       }
