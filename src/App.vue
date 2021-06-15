@@ -2,15 +2,18 @@
   <Header/>
   <Home/>
   <Location/>
+  <Presence/>
 </template>
 <script>
 import Header from './components/Header'
+import Presence from './views/Presence.vue'
 import Home from './views/Home.vue'
 import Location from './views/Location.vue'
 export default {
   name: 'App',
   components: {
     Header,
+    Presence,
     Home,
     Location
   }
