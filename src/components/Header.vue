@@ -3,9 +3,9 @@
     <nav class="header-nav">
       <p>Formatura</p>
       <ul class="header-ul">
-        <li><a href="#" class="header-link">inicio</a></li>
-        <li><a href="#" class="header-link">local</a></li>
-        <li><a href="#" class="header-link">confirmar presença</a></li>
+        <li><a href="#home-page" class="header-link">inicio</a></li>
+        <li><a href="#location-start" class="header-link">local</a></li>
+        <li><a href="#confirm-presence" class="header-link">confirmar presença</a></li>
       </ul>
     </nav>
 </header>
