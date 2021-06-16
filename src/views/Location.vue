@@ -47,6 +47,7 @@ export default {
   background: no-repeat center/cover url('../assets/images/woodnoflagleve.jpg');
   display: flex;
   flex-direction: column;
+  justify-content: center;
   .main-title{
     font-size: 64px;
     margin-bottom: 60px;
