@@ -44,7 +44,7 @@ export default {
   font-size: 33px;
   text-shadow: 2px 3px 5px black;
   height: 100%;
-  background: no-repeat center/cover url('../assets/images/woodnoflagleve.jpg');
+  background: no-repeat center/cover url('../assets/images/woodflag.jpg');
   display: flex;
   flex-direction: column;
   .main-title{
