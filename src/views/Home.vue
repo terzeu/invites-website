@@ -4,7 +4,7 @@
     <h2 class="home-title">Seja bem-vindo</h2>
     <div class="welcome-description">
       <p>Venha celebrar conosco a formatura de Gustavo e Valneide realizada no hotel fazenda pirapitinga no mês de julho! 🍺</p>
-      <p>conto com você para comemorar essa grande conquista em nossas vidas. 🥃</p>
+      <p>Conto com você para comemorar essa grande conquista em nossas vidas. 🥃</p>
     </div>
   </div>       
 </div>
@@ -28,10 +28,11 @@ export default {
   .home-content {
     margin-top: 89px;
     .home-title {
+      font-family: 'sofia';
       margin: 0 0 30px 0;     
     }
     .welcome-description {
-      width: 600px;
+      max-width: 600px;
       p {
         margin: 0;
       }

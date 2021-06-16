@@ -44,11 +44,12 @@ export default {
   font-size: 33px;
   text-shadow: 2px 3px 5px black;
   height: 100vh;
-  background: no-repeat center/cover url('../assets/images/woodnoflagleve.jpg');
+  background: no-repeat center/cover url('../assets/images/woodflag.jpg');
   display: flex;
   flex-direction: column;
   justify-content: center;
   .main-title{
+    font-family: 'sofia';
     font-size: 64px;
     margin-bottom: 60px;
   }
@@ -64,6 +65,7 @@ export default {
         margin-bottom: 60px;
       }
       .title {
+        font-family: 'sofia';
         margin: 6px 0 14px 7px;
         color: #feda00;
         .icon {
