@@ -48,6 +48,7 @@ export default {
   display: flex;
   flex-direction: column;
   .main-title{
+    font-family: 'sofia';
     font-size: 64px;
     margin-bottom: 60px;
   }
@@ -62,6 +63,7 @@ export default {
         margin-bottom: 60px;
       }
       .title {
+        font-family: 'sofia';
         margin: 6px 0 14px 7px;
         color: #feda00;
         .icon {
