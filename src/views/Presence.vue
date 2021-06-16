@@ -33,6 +33,9 @@ export default {
   align-items: center;
   justify-content: center;
   color: #fff;
+  .text-title {
+    font-family: 'sofia';
+  }
   .banner {     
     display: flex;        
     background: no-repeat center/cover url('../assets/images/ribbon.png');

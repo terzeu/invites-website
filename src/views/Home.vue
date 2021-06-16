@@ -28,6 +28,7 @@ export default {
   .home-content {
     margin-top: 89px;
     .home-title {
+      font-family: 'sofia';
       margin: 0 0 30px 0;     
     }
     .welcome-description {
