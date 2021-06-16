@@ -31,7 +31,7 @@ export default {
       margin: 0 0 30px 0;     
     }
     .welcome-description {
-      width: 600px;
+      max-width: 600px;
       p {
         margin: 0;
       }
