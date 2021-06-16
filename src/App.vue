@@ -19,7 +19,7 @@ export default {
   }
 }
 </script>
-<style lang="scss"> 
+<style lang="scss">
 body {
   height: 100%;
   margin: 0;

@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Sofia&display=swap);
 @font-face {
     font-family: 'Gotham Rounded Book';
-    src: url('../assets/fonts/GothamRounded-Book.woff2') format("woff2") local('Gotham Rounded Book');
+    src: url('../assets/fonts/GothamRounded-Book.woff2') format("woff2"),
+         url('../assets/fonts/GothamRounded-Book.eot') format("eot"),
+         url('../assets/fonts/GothamRounded-Book.svg') format("cvg"),
+         url('../assets/fonts/GothamRounded-Book.woff') format("woff"),
+         url('../assets/fonts/GothamRounded-Book.ttf') format("ttf");
+         font-weight:normal;
+         font-style:normal;
 }
