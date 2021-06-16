@@ -55,6 +55,7 @@ export default {
     display: flex;
     font-size: 30px;
     justify-content: center;
+    flex-wrap: wrap;
     .info-blocks {
       .text{
         margin-block: 0;
@@ -68,7 +69,8 @@ export default {
           margin-right: 10px;
         }
       }
-      width: 450px;
+      max-width: 450px;
+      width: 100%;
       text-align: start;
     }
   }
