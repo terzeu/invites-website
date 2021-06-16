@@ -53,7 +53,8 @@ export default {
   } 
   .button-div {
     display: flex;    
-    justify-content: center; 
+    justify-content: center;
+    flex-wrap: wrap;
     .buttons {
       &.success {
         background-color: #07b307;
