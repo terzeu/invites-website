@@ -43,10 +43,11 @@ export default {
   color: rgb(223, 223, 223);
   font-size: 33px;
   text-shadow: 2px 3px 5px black;
-  height: 100%;
+  height: 100vh;
   background: no-repeat center/cover url('../assets/images/woodflag.jpg');
   display: flex;
   flex-direction: column;
+  justify-content: center;
   .main-title{
     font-family: 'sofia';
     font-size: 64px;
@@ -56,6 +57,7 @@ export default {
     display: flex;
     font-size: 30px;
     justify-content: center;
+    flex-wrap: wrap;
     .info-blocks {
       .text{
         margin-block: 0;
@@ -70,7 +72,8 @@ export default {
           margin-right: 10px;
         }
       }
-      width: 450px;
+      max-width: 450px;
+      width: 100%;
       text-align: start;
     }
   }
