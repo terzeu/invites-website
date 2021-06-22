@@ -3,17 +3,20 @@
   <Router/>
 </template>
 <script>
-import Header from './components/Header'
-import Router from'./components/Router'
+import Header from './components/Header.vue'
+import Router from './components/Router.vue'
+import index from './routers/index'
 export default {
   name: 'App',
   components: {
     Header,
     Router
   },
-  props: {
-    Router
-  }
+  data() {
+      return {
+          route: index
+      };
+  },
 }
 </script>
 <style lang="scss">

@@ -1,24 +1,21 @@
 import Home from '../views/Home.vue'
 import Location from '../views/Location.vue'
 import Presence from '../views/Presence.vue'
-const routes = [
+const route = [
     {
-        path: '/home-page',
         id: '#home-page',
         name: 'home',
-        compoment: Home
+        compoment: <Home/>
     },
     {
-        path: '/location-start',
         id: '#location-start',
         name: 'location',
-        compoment: Location
+        compoment: <Location/>
     },
     {
-        path: '/confirm-presence',
         id: '#confirm-presence',
         name: 'presence',
-        compoment: Presence
+        compoment: <Presence/>
     }
 ]
-export default routes
+export default route
