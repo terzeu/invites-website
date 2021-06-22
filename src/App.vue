@@ -1,21 +1,18 @@
 <template>
   <Header/>
-  <Home/>
-  <Location/>
-  <Presence/>
+  <Router/>
 </template>
 <script>
 import Header from './components/Header'
-import Presence from './views/Presence.vue'
-import Home from './views/Home.vue'
-import Location from './views/Location.vue'
+import Router from'./components/Router'
 export default {
   name: 'App',
   components: {
     Header,
-    Presence,
-    Home,
-    Location
+    Router
+  },
+  props: {
+    Router
   }
 }
 </script>
