@@ -43,11 +43,13 @@ export default {
   color: rgb(223, 223, 223);
   font-size: 33px;
   text-shadow: 2px 3px 5px black;
-  height: 100%;
-  background: no-repeat center/cover url('../assets/images/woodnoflagleve.jpg');
+  height: 100vh;
+  background: no-repeat center/cover url('../assets/images/woodflag.jpg');
   display: flex;
   flex-direction: column;
+  justify-content: center;
   .main-title{
+    font-family: 'sofia';
     font-size: 64px;
     margin-bottom: 60px;
   }
@@ -55,6 +57,7 @@ export default {
     display: flex;
     font-size: 30px;
     justify-content: center;
+    flex-wrap: wrap;
     .info-blocks {
       .text{
         margin-block: 0;
@@ -62,13 +65,15 @@ export default {
         margin-bottom: 60px;
       }
       .title {
+        font-family: 'sofia';
         margin: 6px 0 14px 7px;
         color: #feda00;
         .icon {
           margin-right: 10px;
         }
       }
-      width: 450px;
+      max-width: 450px;
+      width: 100%;
       text-align: start;
     }
   }

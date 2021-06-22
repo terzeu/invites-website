@@ -19,14 +19,13 @@ export default {
   }
 }
 </script>
-<style lang="scss"> 
-@import "./assets/app.scss";
+<style lang="scss">
 body {
   height: 100%;
   margin: 0;
 }
 #app {
-  font-family: 'Sofia';
+  font-family: 'Gotham Rounded Book';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

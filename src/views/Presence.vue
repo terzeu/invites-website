@@ -24,7 +24,7 @@ export default {
 </script>
 <style lang="scss" scoped> 
 .confirm-presence {
-  background: no-repeat center/cover url('../assets/images/woodnoflag.jpg');
+  background: no-repeat center/cover url('../assets/images/woodflag.jpg');
   font-size: 33px;
   text-shadow: 2px 3px 5px black;
   height: 100vh;
@@ -33,6 +33,9 @@ export default {
   align-items: center;
   justify-content: center;
   color: #fff;
+  .text-title {
+    font-family: 'sofia';
+  }
   .banner {     
     display: flex;        
     background: no-repeat center/cover url('../assets/images/ribbon.png');
@@ -50,7 +53,8 @@ export default {
   } 
   .button-div {
     display: flex;    
-    justify-content: center; 
+    justify-content: center;
+    flex-wrap: wrap;
     .buttons {
       &.success {
         background-color: #07b307;

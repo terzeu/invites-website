@@ -31,6 +31,7 @@ library.add(faAlignJustify)
 </script>
 <style lang="scss" scoped>
 .header-component {
+  font-family: 'sofia';
   position: fixed;
   width: 100%;
   background: rgba(255, 192, 203, 0.884);  
