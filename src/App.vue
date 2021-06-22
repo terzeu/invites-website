@@ -1,11 +1,11 @@
 <template>
   <Header/>
-  <Router/>
+  <Router :routes="routes"/>
 </template>
 <script>
 import Header from './components/Header.vue'
 import Router from './components/Router.vue'
-import index from './routers/index'
+import routes from './routers/index'
 export default {
   name: 'App',
   components: {
@@ -13,10 +13,10 @@ export default {
     Router
   },
   data() {
-      return {
-          route: index
-      };
-  },
+    return {
+      routes
+    }
+  }
 }
 </script>
 <style lang="scss">
