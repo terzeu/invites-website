@@ -4,21 +4,26 @@ import Presence from '../views/Presence.vue'
 const routes = [
   {
     id: '#home-page',
-    name: 'home',
-    compoment: <Home/>,
+    name: 'Home',
+    compoment: Home,
     headerTitle: 'inicio'
   },
   {
     id: '#location-start',
-    name: 'location',
-    compoment: <Location/>,
+    name: 'Location',
+    compoment: Location,
     headerTitle: 'local'
   },
   {
     id: '#confirm-presence',
-    name: 'presence',
-    compoment: <Presence/>,
+    name: 'Presence',
+    compoment: Presence,
     headerTitle: 'confirmar presença'
   }
 ]
+let auxComponents = {}
+routes.forEach(route => {
+  auxComponents[route.name] = route.compoment
+})
+export const components = auxComponents 
 export default routes

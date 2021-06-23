@@ -1,21 +1,16 @@
 <template>
-  <div v-for="(route, index) in routes" :key="`route-${index}`"> 
-    {{
-      route.component
-    }}
-  </div> 
+  <component v-for="(route, index) in routes" :key="`route-${index}`" :is="route.name"/> 
 </template>
 <script>
+import routes,{components} from '../routers'
 export default {
   name: 'Router',
-  props: {
-    routes: {
-      type: Array,
-      required: true
-    }
+  components: components,
+  mounted() {
+    console.log(components)
   },
-  mounted(){
-    console.log(this.routes)
+  data() {
+    return {routes}
   }
 }
 </script>

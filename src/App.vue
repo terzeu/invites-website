@@ -1,21 +1,15 @@
 <template>
   <Header/>
-  <Router :routes="routes"/>
+  <Router/>
 </template>
 <script>
 import Header from './components/Header.vue'
 import Router from './components/Router.vue'
-import routes from './routers/index'
 export default {
   name: 'App',
   components: {
     Header,
     Router
-  },
-  data() {
-    return {
-      routes
-    }
   }
 }
 </script>
