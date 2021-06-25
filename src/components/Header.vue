@@ -1,7 +1,7 @@
 <template>
 <header class="header-component">
     <nav class="header-nav">            
-      <font-awesome-icon icon="align-justify" class="icon" @click="toggleHeaderMenu" /> 
+      <font-awesome-icon icon="align-justify" class="icon" v-show="mobile" @click="toggleHeaderMenu" /> 
       <ul v-show="isOpenHeaderMenu" :class="{ 'open': isOpenHeaderMenu }" class="header-ul">
         <p class="header-title">Formatura</p>
         <li><a href="#home-page" class="header-link">inicio</a></li>
@@ -15,19 +15,34 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faAlignJustify } from '@fortawesome/free-solid-svg-icons'
 library.add(faAlignJustify)
-  export default {
-    name: 'Header',   
-    data() {  
-      return {
-        isOpenHeaderMenu: false
+export default {
+  name: 'Header',   
+  data() {  
+    return {
+      mobile: false,
+      isOpenHeaderMenu: true, 
+    }
+  },
+  created() {
+    window.addEventListener('resize' , this.checkScreen);
+    this.checkScreen();
+  },
+  methods: {
+    toggleHeaderMenu() {
+      this.isOpenHeaderMenu = !this.isOpenHeaderMenu       
+      },  
+    checkScreen() {
+      this.windowWidth = window.innerWidth;
+      if (this.windowWidth <= 750) {
+        this.mobile = true
+        return;
       }
-    },
-    methods: {
-      toggleHeaderMenu() {
-        this.isOpenHeaderMenu = !this.isOpenHeaderMenu
-      } 
+      this.mobile = false;
+      this.isOpenHeaderMenu = true;
+      return;
     }
   }
+}
 </script>
 <style lang="scss" scoped>
 .header-component {
@@ -42,8 +57,7 @@ library.add(faAlignJustify)
     justify-content: center; 
     .header-title {
       display: flex;
-      justify-content: initial;
-      padding: 0 20px;
+      justify-content: initial;   
       margin-right: 150px;
     }    
     .icon {
@@ -83,12 +97,11 @@ library.add(faAlignJustify)
         display: flex; 
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-direction: column;      
       }  
       .header-title {
-            justify-content: center;
-            margin: 0;
+        justify-content: center;
+        margin: 0;
       }       
       .header-ul {    
         margin: auto;
@@ -100,38 +113,9 @@ library.add(faAlignJustify)
         }
       }
       .icon {
-        display: block;
+        display: flex;
       }
     }  
-    /*@media (max-width: 600px) {
-      p {
-        width: 10px;  
-         
-      }
-      button {  
-            
-      }
-      /*.header-nav {
-        display: flex;
-        padding: 0;
-        align-items: flex-start;
-        justify-content: center;
-      }*/
-      /*.header-ul {
-        flex-direction: column;
-        display: flex;
-        margin: 0;
-        width: 100%;
-        height: 0;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        
-      }    
-      button {
-        display: block;
-      }
-    }*/
   }       
 }
 </style>
