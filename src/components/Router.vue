@@ -6,9 +6,6 @@ import routes,{components} from '../routers'
 export default {
   name: 'Router',
   components: components,
-  mounted() {
-    console.log(components)
-  },
   data() {
     return {routes}
   }
