@@ -1,13 +1,14 @@
 <template>
 <header class="header-component">
-    <nav class="header-nav">            
+    <nav class="header-nav">        
+        
       <font-awesome-icon icon="align-justify" class="icon" v-show="mobile" @click="toggleHeaderMenu" /> 
       <ul v-show="isOpenHeaderMenu" :class="{ 'open': isOpenHeaderMenu }" class="header-ul">
-        <p class="header-title">Formatura</p>
+         <h4>Formatura</h4> 
         <li><a href="#home-page" class="header-link">inicio</a></li>
         <li><a href="#location-start" class="header-link">local</a></li>
         <li><a href="#confirm-presence" class="header-link">confirmar presença</a></li>
-      </ul>   
+      </ul>
     </nav>
 </header>
 </template>
@@ -35,11 +36,10 @@ export default {
       this.windowWidth = window.innerWidth;
       if (this.windowWidth <= 750) {
         this.mobile = true
-        return;
-      }
+      }else{
       this.mobile = false;
       this.isOpenHeaderMenu = true;
-      return;
+      }
     }
   }
 }
@@ -53,13 +53,7 @@ export default {
   font-size: 25px;
   .header-nav {
     display: flex;
-    padding: 0 20px;
-    justify-content: center; 
-    .header-title {
-      display: flex;
-      justify-content: initial;   
-      margin-right: 150px;
-    }    
+    justify-content: space-around;  
     .icon {
       background-color: transparent;
       border: none;
@@ -79,7 +73,6 @@ export default {
       margin: 0;
       padding: 0 20px;
       overflow: hidden;
-      transition: all .5s;
       .header-link {
         margin: 0 30px;
         color: #2c3e50;
@@ -94,22 +87,15 @@ export default {
     }
     @media (max-width: 750px) {
       .header-nav {   
-        display: flex; 
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;      
-      }  
-      .header-title {
-        justify-content: center;
-        margin: 0;
-      }       
+        display: flex;
+        flex-direction: column;     
+      }        
       .header-ul {    
         margin: auto;
         justify-content: center;
         flex-direction: column;      
         &.open {
           height: 230px;
-
         }
       }
       .icon {
