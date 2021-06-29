@@ -1,16 +1,15 @@
 <template>
-<header class="header-component">
-    <nav class="header-nav">        
-        
+  <header :class="{ 'mobile': mobile}" class="header-component">
+    <nav class="header-nav"> 
+      <h4>Formatura</h4>             
       <font-awesome-icon icon="align-justify" class="icon" v-show="mobile" @click="toggleHeaderMenu" /> 
       <ul v-show="isOpenHeaderMenu" :class="{ 'open': isOpenHeaderMenu }" class="header-ul">
-         <h4>Formatura</h4> 
         <li><a href="#home-page" class="header-link">inicio</a></li>
         <li><a href="#location-start" class="header-link">local</a></li>
         <li><a href="#confirm-presence" class="header-link">confirmar presença</a></li>
       </ul>
     </nav>
-</header>
+  </header>
 </template>
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -36,9 +35,9 @@ export default {
       this.windowWidth = window.innerWidth;
       if (this.windowWidth <= 750) {
         this.mobile = true
-      }else{
-      this.mobile = false;
-      this.isOpenHeaderMenu = true;
+      } else {
+        this.mobile = false
+        this.isOpenHeaderMenu = true
       }
     }
   }
@@ -54,18 +53,6 @@ export default {
   .header-nav {
     display: flex;
     justify-content: space-around;  
-    .icon {
-      background-color: transparent;
-      border: none;
-      color: #FFF;
-      font-size: 33px;
-      position: absolute;
-      right: 10px;
-      top: 10px;
-      margin-top: 15px;
-      display: none;
-      cursor: pointer;   
-    }
     .header-ul {
       list-style: none;
       display: flex;
@@ -85,23 +72,31 @@ export default {
         }
       }  
     }
-    @media (max-width: 750px) {
-      .header-nav {   
-        display: flex;
-        flex-direction: column;     
-      }        
-      .header-ul {    
-        margin: auto;
-        justify-content: center;
-        flex-direction: column;      
-        &.open {
-          height: 230px;
-        }
-      }
-      .icon {
-        display: flex;
-      }
-    }  
   }       
+}
+.mobile {
+  .header-nav {   
+    display: flex;
+    flex-direction: column;     
+  } 
+  .icon {
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    font-size: 33px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    margin-top: 15px;
+    display: block;
+    cursor: pointer;   
+  }       
+  .header-ul {    
+    text-align: center;
+    flex-direction: column;      
+    &.open {
+      height: 130px;
+    }
+  }
 }
 </style>
