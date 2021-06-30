@@ -41,7 +41,7 @@ export default {
     background: no-repeat center/cover url('../assets/images/ribbon.png');
     justify-content: center; 
     height: 130px;
-    width: 400px;
+    width: 350px;
     align-items: center;
     .text-date {   
       font-size: 30px;
