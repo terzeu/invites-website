@@ -3,9 +3,9 @@
     <nav class="header-nav">
       <p>Formatura</p>
       <ul class="header-ul">
-        <li><a href="#" class="header-link">inicio</a></li>
-        <li><a href="#" class="header-link">local</a></li>
-        <li><a href="#" class="header-link">confirmar presença</a></li>
+        <li><a href="#home-page" class="header-link">inicio</a></li>
+        <li><a href="#location-start" class="header-link">local</a></li>
+        <li><a href="#confirm-presence" class="header-link">confirmar presença</a></li>
       </ul>
     </nav>
 </header>
@@ -17,11 +17,11 @@ export default{
 </script>
 <style lang="scss" scoped>
 .header-component {
+  font-family: 'sofia';
   position: fixed;
   width: 100%;
-  background: rgba(255, 192, 203, 0.514);  
+  background: rgba(255, 192, 203, 0.884);  
   font-size: 25px;
-  margin-top: -69px;
   .header-nav {
     display: flex;
     justify-content: space-around;
