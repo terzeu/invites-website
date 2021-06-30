@@ -27,7 +27,7 @@ export default {
   background: no-repeat center/cover url('../assets/images/woodflag.jpg');
   font-size: 33px;
   text-shadow: 2px 3px 5px black;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column; 
   align-items: center;
