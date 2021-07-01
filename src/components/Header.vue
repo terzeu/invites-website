@@ -1,5 +1,5 @@
 <template>
-  <header :class="{ 'mobile': mobile}" class="header-component">
+  <header :class="{ 'mobile' : mobile}" class="header-component">
     <nav class="header-nav"> 
       <h4>Formatura</h4>             
       <font-awesome-icon icon="align-justify" class="icon" v-show="mobile" @click="toggleHeaderMenu" /> 
@@ -24,8 +24,8 @@ export default {
     }
   },
   created() {
-    window.addEventListener('resize' , this.checkScreen);
-    this.checkScreen();
+    window.addEventListener('resize' , this.checkScreen)
+    this.checkScreen()
   },
   methods: {
     toggleHeaderMenu() {
@@ -75,6 +75,7 @@ export default {
   }       
 }
 .mobile {
+&.header-component {
   .header-nav {   
     display: flex;
     flex-direction: column;     
@@ -98,5 +99,6 @@ export default {
       height: 130px;
     }
   }
+}
 }
 </style>
