@@ -26,7 +26,7 @@ export default {
   align-items: center;
   justify-content: center;
   .home-content {
-    margin-top: 89px;
+    padding-top: 102.28px;
     .home-title {
       font-family: 'sofia';
       margin: 0 0 30px 0;     

@@ -33,6 +33,7 @@ export default {
   align-items: center;
   justify-content: center;
   color: #fff;
+  padding-top: 102.28px;
   .text-title {
     font-family: 'sofia';
   }

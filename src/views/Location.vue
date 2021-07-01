@@ -48,6 +48,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 102.28px;
   .main-title{
     font-family: 'sofia';
     font-size: 64px;
