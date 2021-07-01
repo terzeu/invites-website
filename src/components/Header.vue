@@ -4,9 +4,9 @@
       <h4>Formatura</h4>             
       <font-awesome-icon icon="align-justify" class="icon" v-show="mobile" @click="toggleHeaderMenu" /> 
       <ul v-show="isOpenHeaderMenu" :class="{ 'open': isOpenHeaderMenu }" class="header-ul">
-        <li><a href="#home-page" class="header-link">inicio</a></li>
-        <li><a href="#location-start" class="header-link">local</a></li>
-        <li><a href="#confirm-presence" class="header-link">confirmar presença</a></li>
+        <li><a href="#home-page" class="header-link">INICIO</a></li>
+        <li><a href="#location-start" class="header-link">LOCAL</a></li>
+        <li><a href="#confirm-presence" class="header-link">CONFIRMAR PRESENÇA</a></li>
       </ul>
     </nav>
   </header>
