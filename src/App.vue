@@ -10,7 +10,6 @@ import firebaseConfig from './config/firebase'
 import Firebase from 'firebase'
 Firebase.initializeApp(firebaseConfig)
 const jump = Firebase.database().ref().child('Convidados')
-
 export default {
   name: 'App',
   components: {
