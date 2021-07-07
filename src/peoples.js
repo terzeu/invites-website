@@ -533,17 +533,17 @@ const guests = [
       presence: false,
     },
     {
-      name: 'Paulo Lord Black',
+      name: 'Henrique',
       group: 'Familia39',
       presence: false,
     },
     {
-      name: 'Jezreel The Shooter',
+      name: 'Leone',
       group: 'Familia39',
       presence: false,
     },
     {
-      name: 'Zernetao',
+      name: 'Tavares',
       group: 'Familia39',
       presence: false,
     }
