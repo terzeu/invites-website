@@ -1,15 +1,14 @@
 <template>
   <div id="obs-start" class="obs-start">
     <div class="observation-title">
-      <h2>Observações</h2>
-    </div> 
-    <div class="description">
-      <p>Não esqueça de levar sua mascara. A pandemia ainda não  acabou, estaremos disponibilizando alcool em gel a todos!</p>
+      <h2 class="home-title">Observações</h2>
+      <div class="description">
+        <p>Não esqueça de levar sua mascara. A pandemia ainda não  acabou, estaremos disponibilizando alcool em gel a todos!</p>
+      </div>    
     </div>
   </div>
 </template>
 <script>
-
 export default {
   name: 'Observation'
 }
@@ -25,11 +24,15 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  .observation-title {
+  .observation-title { 
     padding-top: 102.28px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    .home-title {
+      font-family: 'sofia';
+      margin: 0 0 30px 0;
+    }  
+    .description {
+      max-width: 600px;
+    }
   }
 }
 </style>
