@@ -4,9 +4,9 @@
     <h2>Confirme sua presença</h2>
   </div>  
   <div class="banner">
-    <span class="text-date">30/07/2021</span>
+    <span class="text-date">31/07/2021</span>
   </div>
-  <span class="text">Quinta-feira às 15 horas</span>     
+  <span class="text">Sábado às 11 horas.</span>     
   <div class="colls">
     <p>Por favor, selecione uma das 3 opções abaixo:</p>
   </div>  
