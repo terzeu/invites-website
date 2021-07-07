@@ -43,11 +43,12 @@ export default {
   color: rgb(223, 223, 223);
   font-size: 33px;
   text-shadow: 2px 3px 5px black;
-  height: 100vh;
+  height: 100%;
   background: no-repeat center/cover url('../assets/images/woodflag.jpg');
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 102.28px;
   .main-title{
     font-family: 'sofia';
     font-size: 64px;
