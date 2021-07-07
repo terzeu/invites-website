@@ -7,7 +7,7 @@
         <h3 class="title">
           <font-awesome-icon icon="clock" class="icon" />QUANDO?
         </h3>
-        <p class="text">Quinta-feira, 31 de Julho de 2021 a partir das 20:00</p>
+        <p class="text">Sábado, 31 de Julho a partir das 11:00 horas</p>
       </div>
       <div class="location-description info-blocks">
         <h3 class="title">
