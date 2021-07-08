@@ -5,11 +5,9 @@
 <script>
 import Header from './components/Header.vue'
 import Router from './components/Router.vue'
-import pessoa from './peoples'
-import firebaseConfig from './config/firebase'
-import Firebase from 'firebase'
-Firebase.initializeApp(firebaseConfig)
-const jump = Firebase.database().ref().child('Convidados')
+import guests from './peoples'
+import { firebaseCollection } from './config/firebase'
+
 export default {
   name: 'App',
   components: {
@@ -17,11 +15,11 @@ export default {
     Router
   },
   data() {
-   return { pessoa } 
+   return { guests } 
   },
-  method: {
+  methods: {
     add() {
-      jump.push(pessoa)
+      firebaseCollection.push(guests)
     }
   }
 }
