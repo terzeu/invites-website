@@ -44,16 +44,16 @@ export default {
     confirmaPresencaDoConvidado(presence) {
       if (presence == false){
         firebaseCollection.ref().child('Convidados').child('-Me5xxMocDBb1UhhvQis').
-        child('0').child('presence').set(this.presence)
+        child('108').child('presence').set(this.presence)
       }
       else{
         firebaseCollection.ref().child('Convidados').child('-Me5xxMocDBb1UhhvQis').
-        child('0').child('presence').set(!this.presence)
+        child('108').child('presence').set(!this.presence)
       }
     },
     updateguest(){
       firebaseCollection.ref().child('Convidados').child('-Me5xxMocDBb1UhhvQis').
-      child('0').child('presence').get().then((snapshot) => {
+      child('108').child('presence').get().then((snapshot) => {
       this.teste = snapshot.val()
       console.log(snapshot.val())
       this.confirmaPresencaDoConvidado(this.teste)
