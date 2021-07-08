@@ -7,6 +7,7 @@
         <li><a @click="toggleHeaderMenu" href="#home-page" class="header-link">inicio</a></li>
         <li><a @click="toggleHeaderMenu" href="#location-start" class="header-link">local</a></li>
         <li><a @click="toggleHeaderMenu" href="#confirm-presence" class="header-link">confirmar presença</a></li>
+        <li><a @click="toggleHeaderMenu" href="#obs-start" class="header-link">Observações</a></li>
       </ul>
     </nav>
   </header>
@@ -99,7 +100,7 @@ export default {
     text-align: center;
     flex-direction: column;      
     &.open {
-      height: 120px;
+      height: 170px;
     }
   }
 }

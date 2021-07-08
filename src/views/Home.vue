@@ -6,7 +6,7 @@
       <p>Venha celebrar conosco a formatura de Gustavo e Francisca, junto com seu aniverśario de 50 anos. Será realizado no Hotel Fazenda Pirapitinga no dia 31/07/2021, sábado a partir das 11h da manhã! 🍺</p>
       <p>Conto com você para comemorar essa grande conquista em nossas vidas. 🥃</p>
     </div>
-  </div>       
+  </div>
 </div>
 </template>
 <script>
@@ -38,5 +38,5 @@ export default {
       }
     }
   }
-}   
+}
 </style>
