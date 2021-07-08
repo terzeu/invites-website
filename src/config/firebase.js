@@ -12,4 +12,5 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 
-export const firebaseCollection = firebase.database().ref().child('Convidados')
+export const firebaseCollection = firebase.database()
+//.ref().child('Convidados')

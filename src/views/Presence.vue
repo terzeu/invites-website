@@ -13,7 +13,7 @@
     <div class="family-container">
       <ul class="family-list">
         <li class="name"><font-awesome-icon icon="beer" class="icon"/>
-        <input type="checkbox" name="" id="check" @click="confirmaPresencaDoConvidado">
+        <input type="checkbox" name="" id="check" @click="updateguest">
        </li>
        <li class="name"><font-awesome-icon icon="beer" class="icon"/>
         <input type="checkbox" name="" id="check">
@@ -28,15 +28,39 @@
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBeer } from '@fortawesome/free-solid-svg-icons'
+import {firebaseCollection} from '../config/firebase'
+
 library.add(faBeer)
 export default {
   name: 'Confirm',
   data() {
+    return {
+      guest: '',
+      teste: '',
+      presence: true
+    }
   },
   methods: {
-    confirmaPresencaDoConvidado() {
-      
+    confirmaPresencaDoConvidado(presence) {
+      if (presence == false){
+        firebaseCollection.ref().child('Convidados').child('-Me5xxMocDBb1UhhvQis').
+        child('0').child('presence').set(this.presence)
+      }
+      else{
+        firebaseCollection.ref().child('Convidados').child('-Me5xxMocDBb1UhhvQis').
+        child('0').child('presence').set(!this.presence)
+      }
+    },
+    updateguest(){
+      firebaseCollection.ref().child('Convidados').child('-Me5xxMocDBb1UhhvQis').
+      child('0').child('presence').get().then((snapshot) => {
+      this.teste = snapshot.val()
+      console.log(snapshot.val())
+      this.confirmaPresencaDoConvidado(this.teste)
+    })
     }
+  },
+  mounted(){
   }
 }
 </script>
