@@ -6,11 +6,22 @@
 <script>
 import Header from './components/Header.vue'
 import Router from './components/Router.vue'
+import guests from './config/peoples'
+import { firebaseCollection } from './config/firebase'
+
 export default {
   name: 'App',
   components: {
     Header,
     Router
+  },
+  data() {
+   return { guests } 
+  },
+  methods: {
+    add() {
+      firebaseCollection.push(guests)
+    }
   }
 }
 </script>
