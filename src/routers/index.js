@@ -1,6 +1,7 @@
 import Home from '../views/Home.vue'
 import Location from '../views/Location.vue'
 import Presence from '../views/Presence.vue'
+import Observation from '../views/Observation.vue'
 const routes = [
   {
     id: '#home-page',
@@ -19,6 +20,12 @@ const routes = [
     name: 'Presence',
     compoment: Presence,
     headerTitle: 'confirmar presença'
+  },
+  {
+    id: '#obs-start',
+    name: 'Observation',
+    compoment: Observation,
+    headerTitle: 'Observação'
   }
 ]
 let auxComponents = {}
