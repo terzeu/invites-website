@@ -13,7 +13,7 @@
     <div class="family-container">
       <ul class="family-list">
         <li class="name"><font-awesome-icon icon="beer" class="icon"/>
-        <input type="checkbox" name="" id="check" @click="updateguest">
+        <input type="checkbox" name="" id="check" @click="confirmaPresencaDoConvidado">
        </li>
        <li class="name"><font-awesome-icon icon="beer" class="icon"/>
         <input type="checkbox" name="" id="check">
@@ -36,29 +36,22 @@ export default {
   data() {
     return {
       guest: '',
-      teste: '',
       presence: true
     }
   },
   methods: {
-    confirmaPresencaDoConvidado(presence) {
-      if (presence == false){
-        firebaseCollection.ref().child('Convidados').child('-Me5xxMocDBb1UhhvQis').
-        child('108').child('presence').set(this.presence)
-      }
-      else{
-        firebaseCollection.ref().child('Convidados').child('-Me5xxMocDBb1UhhvQis').
-        child('108').child('presence').set(!this.presence)
-      }
+    confirmaPresencaDoConvidado() {
+      firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child('108').child('presence').get().then((snapshot) => {
+        this.presence = snapshot.val()
+        console.log(snapshot.val())
+        if (this.presence == false){
+          firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child('108').child('presence').set(!this.presence)
+        }
+        else{
+          firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child('108').child('presence').set(!this.presence)
+        }
+      })
     },
-    updateguest(){
-      firebaseCollection.ref().child('Convidados').child('-Me5xxMocDBb1UhhvQis').
-      child('108').child('presence').get().then((snapshot) => {
-      this.teste = snapshot.val()
-      console.log(snapshot.val())
-      this.confirmaPresencaDoConvidado(this.teste)
-    })
-    }
   },
   mounted(){
   }
