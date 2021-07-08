@@ -43,15 +43,11 @@ export default {
   },
   methods: {
     confirmaPresencaDoConvidado() {
-      firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child('108').child('presence').get().then((snapshot) => {
-        this.presence = snapshot.val()
-        console.log(snapshot.val())
-        if (this.presence == false){
-          firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child('108').child('presence').set(!this.presence)
-        }
-        else{
-          firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child('108').child('presence').set(!this.presence)
-        }
+      firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child('108')
+        .child('presence').get().then((snapshot) => {
+          this.presence = snapshot.val()
+          firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child('108')
+            .child('presence').set(!this.presence)
       })
     },
   },
