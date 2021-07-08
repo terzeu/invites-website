@@ -12,46 +12,60 @@
   </div>
     <div class="family-container">
       <ul class="family-list">
-        <li class="name notify"><font-awesome-icon icon="beer" class="icon"/>
-        <input type="checkbox" name="" id="check" @click="confirmaPresencaDoConvidado">
-       </li>
-       <li class="name"><font-awesome-icon icon="beer" class="icon"/>
-        <input type="checkbox" name="" id="check">
-       </li>
-       <li class="name"><font-awesome-icon icon="beer" class="icon"/>
-        <input type="checkbox" name="" id="check">
-       </li>
+        <li
+          v-for="(guest,indexGuest) in guests"
+          :key="indexGuest"
+          class="name notify"
+          @click="confirmaPresencaDoConvidado(guest)"
+        >
+          <font-awesome-icon icon="beer" class="icon"/>
+          <span>{{ guest.name }}</span>
+          <button><font-awesome-icon icon="check" class="icon"/></button>
+        </li>
     </ul>
   </div>
 </div>
 </template>
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBeer } from '@fortawesome/free-solid-svg-icons'
+import { faBeer, faCheck } from '@fortawesome/free-solid-svg-icons'
 import {firebaseCollection} from '../config/firebase'
 import { notify } from "@kyvg/vue3-notification";
 
 notify({title: "Vue 3 notification 🎉",});
-library.add(faBeer)
+library.add(faBeer, faCheck)
+
 export default {
   name: 'Confirm',
   data() {
     return {
-      guest: '',
-      presence: true
+      presence: true,
+      group: 'RmFtaWxpYTY=',
+      guests: [],
+      allGuests: []
     }
   },
   methods: {
-    confirmaPresencaDoConvidado() {
-      firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child('108')
+    confirmaPresencaDoConvidado(guest) {
+      const indexOfGuest = this.allGuests.findIndex(item => item.name === guest.name && item.group === guest.group) 
+
+      firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child(indexOfGuest)
         .child('presence').get().then((snapshot) => {
           this.presence = snapshot.val()
-          firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child('108')
+          firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child(indexOfGuest)
             .child('presence').set(!this.presence)
       })
     },
+    getFamilyGuests() {
+      firebaseCollection.child('-Me5xxMocDBb1UhhvQis').get().then((snapshot) => {
+        this.allGuests = snapshot.val()
+        this.guests = this.allGuests.filter(guest => guest.group === this.group)
+        console.log(this.guests)
+      })
+    }
   },
-  mounted(){
+  mounted() {
+    this.getFamilyGuests()
   }
 }
 </script>
