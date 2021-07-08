@@ -12,7 +12,7 @@
   </div>
     <div class="family-container">
       <ul class="family-list">
-        <li class="name"><font-awesome-icon icon="beer" class="icon"/>
+        <li class="name notify"><font-awesome-icon icon="beer" class="icon"/>
         <input type="checkbox" name="" id="check" @click="confirmaPresencaDoConvidado">
        </li>
        <li class="name"><font-awesome-icon icon="beer" class="icon"/>
@@ -29,7 +29,9 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBeer } from '@fortawesome/free-solid-svg-icons'
 import {firebaseCollection} from '../config/firebase'
+import { notify } from "@kyvg/vue3-notification";
 
+notify({title: "Vue 3 notification 🎉",});
 library.add(faBeer)
 export default {
   name: 'Confirm',
@@ -101,6 +103,9 @@ export default {
       #check {
         width: 40px;
         cursor: pointer;
+        .notify{
+          color: blue;
+        }
       }  
     }
   }      
