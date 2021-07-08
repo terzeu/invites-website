@@ -5,7 +5,7 @@
 <script>
 import Header from './components/Header.vue'
 import Router from './components/Router.vue'
-import guests from './peoples'
+import guests from './config/peoples'
 import { firebaseCollection } from './config/firebase'
 
 export default {
