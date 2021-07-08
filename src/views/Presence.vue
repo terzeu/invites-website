@@ -6,20 +6,38 @@
   <div class="banner">
     <span class="text-date">31/07/2021</span>
   </div>
-  <span class="text">Sábado às 11 horas.</span>     
+  <span class="text">Sábado às 11 horas.</span>
   <div class="colls">
-    <p>Por favor, selecione uma das 3 opções abaixo:</p>
-  </div>  
-  <div class="button-div">
-    <button class="buttons success">eu vou</button>
-    <button class="buttons warning">talvez</button>
-    <button class="buttons danger">não vou</button>
-  </div>   
-</div>  
+    <p>Por favor, selecione uma das opções correspondente com seu nome!</p>
+  </div>
+    <div class="family-container">
+      <ul class="family-list">
+        <li class="name"><font-awesome-icon icon="beer" class="icon"/>
+        <input type="checkbox" name="" id="check" @click="confirmaPresencaDoConvidado">
+       </li>
+       <li class="name"><font-awesome-icon icon="beer" class="icon"/>
+        <input type="checkbox" name="" id="check">
+       </li>
+       <li class="name"><font-awesome-icon icon="beer" class="icon"/>
+        <input type="checkbox" name="" id="check">
+       </li>
+    </ul>
+  </div>
+</div>
 </template>
 <script>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faBeer } from '@fortawesome/free-solid-svg-icons'
+library.add(faBeer)
 export default {
-  name: 'Confirm'
+  name: 'Confirm',
+  data() {
+  },
+  methods: {
+    confirmaPresencaDoConvidado() {
+      
+    }
+  }
 }
 </script>
 <style lang="scss" scoped> 
@@ -29,7 +47,7 @@ export default {
   text-shadow: 2px 3px 5px black;
   height: 100%;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #fff;
@@ -47,50 +65,27 @@ export default {
     .text-date {   
       font-size: 30px;
       margin-top: -45px;
-    } 
+    }
   }
   .text {
     margin-top: 20px;
-  } 
-  .button-div {
-    display: flex;    
+  }
+  .family-container{
+    display: flex;  
     justify-content: center;
     flex-wrap: wrap;
-    .buttons {
-      &.success {
-        background-color: #07b307;
-        border: #07b307;
-      &:hover {
-        background: #46a049;
+    .family-list {
+      list-style: none;
+      .icon {
+        &:hover {
+          color: yellow;
+        } 
       }
-    } 
-      &.warning {
-        background-color: #f9ce04;
-        border: #f9ce04;
-      &:hover {
-        background: #e68a00;
-      }
-    } 
-      &.danger {
-        background-color: #e52729;
-        border: #e52729;
-      &:hover {
-        background: #da190b;
-      }
-    }  
-      display: flex;  
-      text-transform: uppercase;
-      align-items: center;
-      border-radius: 25px;
-      height: 48px;
-      width: 150px;
-      justify-content: center;  
-      color: #ffff; 
-      border-color: #ffff;    
-      margin: 9px 8px;       
-      cursor: pointer;
-      font-family: 'arial'     
-    }          
-  }            
+      #check {
+        width: 40px;
+        cursor: pointer;
+      }  
+    }
+  }      
 }   
 </style>

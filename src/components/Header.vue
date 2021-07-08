@@ -1,7 +1,7 @@
 <template>
   <header :class="{ 'mobile' : mobile}" class="header-component">
-    <nav class="header-nav"> 
-      <h5>Formatura</h5>             
+    <nav class="header-nav">
+      <h5>Formatura</h5>        
       <font-awesome-icon icon="align-justify" class="icon" v-show="mobile" @click="toggleHeaderMenu" /> 
       <ul v-show="isOpenHeaderMenu" :class="{ 'open': isOpenHeaderMenu }" class="header-ul">
         <li><a @click="toggleHeaderMenu" href="#home-page" class="header-link">inicio</a></li>
@@ -20,7 +20,7 @@ export default {
   data() {  
     return {
       mobile: false,
-      isOpenHeaderMenu: true,
+      isOpenHeaderMenu: true
     }
   },
   created() {
