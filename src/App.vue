@@ -1,4 +1,5 @@
 <template>
+  <notifications/>
   <Header/>
   <Router/>
 </template>

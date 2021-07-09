@@ -6,20 +6,67 @@
   <div class="banner">
     <span class="text-date">31/07/2021</span>
   </div>
-  <span class="text">Sábado às 11 horas.</span>     
+  <span class="text">Sábado às 11 horas.</span>
   <div class="colls">
-    <p>Por favor, selecione uma das 3 opções abaixo:</p>
-  </div>  
-  <div class="button-div">
-    <button class="buttons success">eu vou</button>
-    <button class="buttons warning">talvez</button>
-    <button class="buttons danger">não vou</button>
-  </div>   
-</div>  
+    <p>Por favor, selecione uma das opções correspondente com seu nome!</p>
+  </div>
+    <div class="family-container">
+      <ul class="family-list">
+        <li
+          v-for="(guest,indexGuest) in guests"
+          :key="indexGuest"
+          class="name notify"
+          @click="confirmaPresencaDoConvidado(guest)"
+        >
+          <font-awesome-icon icon="beer" class="icon-beer"/>
+          <span class="name-list">{{ guest.name }}</span>
+          <button class="icon-check"><font-awesome-icon icon="check"/></button>
+        </li>
+    </ul>
+  </div>
+</div>
 </template>
 <script>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faBeer, faCheck } from '@fortawesome/free-solid-svg-icons'
+import {firebaseCollection} from '../config/firebase'
+import { notify } from "@kyvg/vue3-notification";
+
+notify({title: "Vue 3 notification 🎉",});
+library.add(faBeer, faCheck)
+
 export default {
-  name: 'Confirm'
+  name: 'Confirm',
+  data() {
+    return {
+      presence: true,
+      group: 'RmFtaWxpYTY=',
+      guests: [],
+      allGuests: []
+    }
+  },
+  methods: {
+    confirmaPresencaDoConvidado(guest) {
+      const indexOfGuest = this.allGuests.findIndex(item => item.name === guest.name && item.group === guest.group) 
+
+      firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child(indexOfGuest)
+        .child('presence').get().then((snapshot) => {
+          this.presence = snapshot.val()
+          firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child(indexOfGuest)
+            .child('presence').set(!this.presence)
+      })
+    },
+    getFamilyGuests() {
+      firebaseCollection.child('-Me5xxMocDBb1UhhvQis').get().then((snapshot) => {
+        this.allGuests = snapshot.val()
+        this.guests = this.allGuests.filter(guest => guest.group === this.group)
+        console.log(this.guests)
+      })
+    }
+  },
+  mounted() {
+    this.getFamilyGuests()
+  }
 }
 </script>
 <style lang="scss" scoped> 
@@ -29,7 +76,7 @@ export default {
   text-shadow: 2px 3px 5px black;
   height: 100%;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #fff;
@@ -47,50 +94,47 @@ export default {
     .text-date {   
       font-size: 30px;
       margin-top: -45px;
-    } 
+    }
   }
   .text {
     margin-top: 20px;
-  } 
-  .button-div {
-    display: flex;    
+  }
+  .family-container{
+    display: flex;  
     justify-content: center;
     flex-wrap: wrap;
-    .buttons {
-      &.success {
-        background-color: #07b307;
-        border: #07b307;
-      &:hover {
-        background: #46a049;
+    .family-list {
+      list-style: none;
+      .name-list {
+        margin: 20px;
       }
-    } 
-      &.warning {
-        background-color: #f9ce04;
-        border: #f9ce04;
-      &:hover {
-        background: #e68a00;
+      .icon-beer {
+        &:hover {
+          color: yellow; 
+        } 
       }
-    } 
-      &.danger {
-        background-color: #e52729;
-        border: #e52729;
-      &:hover {
-        background: #da190b;
-      }
-    }  
-      display: flex;  
-      text-transform: uppercase;
-      align-items: center;
-      border-radius: 25px;
-      height: 48px;
-      width: 150px;
-      justify-content: center;  
-      color: #ffff; 
-      border-color: #ffff;    
-      margin: 9px 8px;       
-      cursor: pointer;
-      font-family: 'arial'     
-    }          
-  }            
+      .icon-check {
+        &:hover {
+          color: blue;
+           border: 1px solid #fff;
+        }
+        &:active {
+          color: yellow;
+        }  
+        height: 20px;
+        width: 25px;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        
+      } 
+      #check {
+       
+        cursor: pointer;
+        .notify{
+          color: blue;
+        }
+      }  
+    }
+  }      
 }   
 </style>
