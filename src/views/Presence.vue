@@ -20,7 +20,7 @@
         >
           <font-awesome-icon icon="beer" class="icon"/>
           <span>{{ guest.name }}</span>
-          <button><font-awesome-icon icon="check" class="icon"/></button>
+          <font-awesome-icon icon="check-circle" class="icon"/>
         </li>
     </ul>
   </div>
@@ -28,12 +28,11 @@
 </template>
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBeer, faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faBeer, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import {firebaseCollection} from '../config/firebase'
 import { notify } from "@kyvg/vue3-notification";
 
-library.add(faBeer, faCheck)
-
+library.add(faBeer, faCheckCircle)
 export default {
   name: 'Confirm',
   data() {
@@ -41,7 +40,9 @@ export default {
       presence: true,
       group: '',
       guests: [],
-      allGuests: []
+      allGuests: [],
+      guestNames: [],
+      names: 'Guilherme'
     }
   },
   methods: {
@@ -56,7 +57,7 @@ export default {
           var confirmedDate = Date.now()
           firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child(indexOfGuest)
             .child('confirmedDate').set(confirmedDate)
-          notify({ title: "Important message", text: "PRESENÇA CONFIRMADA" });
+          notify({ title: 'PRESENÇA CONFIRMADA', text: 'Aguardamos você na nossa festa !', type: 'success' });
           }
       })
     },
@@ -64,13 +65,14 @@ export default {
       firebaseCollection.child('-Me5xxMocDBb1UhhvQis').get().then((snapshot) => {
         this.allGuests = snapshot.val()
         this.guests = this.allGuests.filter(guest => guest.group === this.group)
+        this.guestNames = this.allGuests.slice(luba => luba.name)
+        console.log(this.guestNames)
       })
     }
   },
   mounted() {
     this.getFamilyGuests()
     this.group = window.location.hash.split('?')[1]
-    console.log()
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <notifications position="bottom" width="100%"/>
+  <notifications/>
   <Header/>
   <Router/>
 </template>
