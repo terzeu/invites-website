@@ -15,7 +15,7 @@
         <li
           v-for="(guest,indexGuest) in guests"
           :key="indexGuest"
-          class="name notify"
+          class="name"
           @click="confirmaPresencaDoConvidado(guest)"
         >
           <font-awesome-icon icon="beer" class="icon"/>
@@ -32,7 +32,6 @@ import { faBeer, faCheck } from '@fortawesome/free-solid-svg-icons'
 import {firebaseCollection} from '../config/firebase'
 import { notify } from "@kyvg/vue3-notification";
 
-notify({title: "Vue 3 notification 🎉",});
 library.add(faBeer, faCheck)
 
 export default {
@@ -40,7 +39,7 @@ export default {
   data() {
     return {
       presence: true,
-      group: 'RmFtaWxpYTY=',
+      group: 'RmFtaWxpYTM5',
       guests: [],
       allGuests: []
     }
@@ -48,19 +47,23 @@ export default {
   methods: {
     confirmaPresencaDoConvidado(guest) {
       const indexOfGuest = this.allGuests.findIndex(item => item.name === guest.name && item.group === guest.group) 
-
       firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child(indexOfGuest)
         .child('presence').get().then((snapshot) => {
           this.presence = snapshot.val()
           firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child(indexOfGuest)
             .child('presence').set(!this.presence)
+          if(this.presence == false){
+          var confirmedDate = new Date().getTime()
+          firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child(indexOfGuest)
+            .child('confirmedDate').set(confirmedDate)
+          notify({ text: "PRESENÇA CONFIRMADA" });
+          }
       })
     },
     getFamilyGuests() {
       firebaseCollection.child('-Me5xxMocDBb1UhhvQis').get().then((snapshot) => {
         this.allGuests = snapshot.val()
         this.guests = this.allGuests.filter(guest => guest.group === this.group)
-        console.log(this.guests)
       })
     }
   },
@@ -113,9 +116,6 @@ export default {
       #check {
         width: 40px;
         cursor: pointer;
-        .notify{
-          color: blue;
-        }
       }  
     }
   }      
