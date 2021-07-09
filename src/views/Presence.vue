@@ -41,8 +41,7 @@ export default {
       group: '',
       guests: [],
       allGuests: [],
-      guestNames: [],
-      names: 'Guilherme'
+      guestLinks:[]
     }
   },
   methods: {
@@ -65,10 +64,8 @@ export default {
       firebaseCollection.child('-Me5xxMocDBb1UhhvQis').get().then((snapshot) => {
         this.allGuests = snapshot.val()
         this.guests = this.allGuests.filter(guest => guest.group === this.group)
-        this.guestNames = this.allGuests.slice(luba => luba.name)
-        console.log(this.guestNames)
       })
-    }
+    },
   },
   mounted() {
     this.getFamilyGuests()
