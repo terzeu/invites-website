@@ -4,7 +4,7 @@
       <h2 class="home-title">Observações</h2>
       <div class="description">
         <p>Não esqueça de levar sua mascara. A pandemia ainda não  acabou, estaremos disponibilizando alcool em gel a todos!</p>
-      </div>    
+      </div>
     </div>
   </div>
 </template>

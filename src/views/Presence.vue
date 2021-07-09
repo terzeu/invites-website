@@ -15,12 +15,12 @@
         <li
           v-for="(guest,indexGuest) in guests"
           :key="indexGuest"
-          class="name notify"
-          @click="confirmaPresencaDoConvidado(guest)"
+          class="confirmPresence"  
+          @click="confirmaPresencaDoConvidado(guest)" :class="{ 'active' : guest.presence }"
         >
           <font-awesome-icon icon="beer" class="icon-beer"/>
           <span class="name-list">{{ guest.name }}</span>
-          <button class="icon-check"><font-awesome-icon icon="check"/></button>
+          <button class="buttonClass"><font-awesome-icon icon="check" /></button>
         </li>
     </ul>
   </div>
@@ -39,32 +39,30 @@ export default {
   name: 'Confirm',
   data() {
     return {
-      presence: true,
+      checked: false,
       group: 'RmFtaWxpYTY=',
       guests: [],
-      allGuests: []
+      allGuests: [],
     }
   },
   methods: {
     confirmaPresencaDoConvidado(guest) {
       const indexOfGuest = this.allGuests.findIndex(item => item.name === guest.name && item.group === guest.group) 
-
       firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child(indexOfGuest)
-        .child('presence').get().then((snapshot) => {
-          this.presence = snapshot.val()
-          firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child(indexOfGuest)
-            .child('presence').set(!this.presence)
-      })
+      .child('presence').set(!guest.presence)
+      if (this.guest.presence == false) {
+         this.guests = !this.guests
+      }
     },
     getFamilyGuests() {
       firebaseCollection.child('-Me5xxMocDBb1UhhvQis').get().then((snapshot) => {
-        this.allGuests = snapshot.val()
-        this.guests = this.allGuests.filter(guest => guest.group === this.group)
-        console.log(this.guests)
+      this.allGuests = snapshot.val()
+      this.guests = this.allGuests.filter(guest => guest.group === this.group)
+      console.log(this.guests)
       })
     }
-  },
-  mounted() {
+},
+mounted() {
     this.getFamilyGuests()
   }
 }
@@ -107,33 +105,21 @@ export default {
       list-style: none;
       .name-list {
         margin: 20px;
+        color: #fff;
       }
-      .icon-beer {
-        &:hover {
-          color: yellow; 
-        } 
-      }
-      .icon-check {
-        &:hover {
-          color: blue;
-           border: 1px solid #fff;
-        }
-        &:active {
-          color: yellow;
-        }  
-        height: 20px;
-        width: 25px;
-        border-radius: 5px;
-        border: 1px solid #fff;
-        
-      } 
-      #check {
-       
-        cursor: pointer;
-        .notify{
-          color: blue;
-        }
-      }  
+      .confirmPresence {    
+        .buttonClass {
+          background-color: white;
+          color: white;        
+          height: 20px;
+          width: 25px;
+          border-radius: 5px;
+          border: 1px solid #fff;
+          position: relative;
+          left: 40px;
+          top: -3px;
+        }             
+      }      
     }
   }      
 }   
