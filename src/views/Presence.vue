@@ -18,9 +18,9 @@
           class="name notify"
           @click="confirmaPresencaDoConvidado(guest)"
         >
-          <font-awesome-icon icon="beer" class="icon"/>
-          <span>{{ guest.name }}</span>
-          <button><font-awesome-icon icon="check" class="icon"/></button>
+          <font-awesome-icon icon="beer" class="icon-beer"/>
+          <span class="name-list">{{ guest.name }}</span>
+          <button class="icon-check"><font-awesome-icon icon="check"/></button>
         </li>
     </ul>
   </div>
@@ -105,13 +105,30 @@ export default {
     flex-wrap: wrap;
     .family-list {
       list-style: none;
-      .icon {
+      .name-list {
+        margin: 20px;
+      }
+      .icon-beer {
         &:hover {
-          color: yellow;
+          color: yellow; 
         } 
       }
+      .icon-check {
+        &:hover {
+          color: blue;
+           border: 1px solid #fff;
+        }
+        &:active {
+          color: yellow;
+        }  
+        height: 20px;
+        width: 25px;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        
+      } 
       #check {
-        width: 40px;
+       
         cursor: pointer;
         .notify{
           color: blue;
