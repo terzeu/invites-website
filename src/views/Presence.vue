@@ -39,7 +39,7 @@ export default {
   data() {
     return {
       presence: true,
-      group: 'RmFtaWxpYTM5',
+      group: '',
       guests: [],
       allGuests: []
     }
@@ -53,10 +53,10 @@ export default {
           firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child(indexOfGuest)
             .child('presence').set(!this.presence)
           if(this.presence == false){
-          var confirmedDate = new Date().getTime()
+          var confirmedDate = Date.now()
           firebaseCollection.child('-Me5xxMocDBb1UhhvQis').child(indexOfGuest)
             .child('confirmedDate').set(confirmedDate)
-          notify({ text: "PRESENÇA CONFIRMADA" });
+          notify({ title: "Important message", text: "PRESENÇA CONFIRMADA" });
           }
       })
     },
@@ -69,6 +69,8 @@ export default {
   },
   mounted() {
     this.getFamilyGuests()
+    this.group = window.location.hash.split('?')[1]
+    console.log()
   }
 }
 </script>
