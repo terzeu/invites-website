@@ -19,7 +19,7 @@ export default {
   color: rgb(223, 223, 223);
   font-size: 33px;
   text-shadow: 2px 3px 5px black;
-  height: 100%;
+  min-height: 100vh;
   background: no-repeat center/cover url('../assets/images/mainwood.jpg');
   display: flex;
   flex-direction: column; 
@@ -27,6 +27,8 @@ export default {
   justify-content: center;
   .home-content {
     padding-top: 102.28px;
+    padding-left: 20px;
+    padding-right: 20px;
     .home-title {
       font-family: 'sofia';
       margin: 0 0 30px 0;     

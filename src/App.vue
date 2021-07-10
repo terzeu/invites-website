@@ -1,5 +1,5 @@
 <template>
-  <notifications/>
+  <notifications />
   <Header/>
   <Router/>
 </template>
@@ -37,5 +37,19 @@ body {
   text-align: center;
   color: #2c3e50;
   height: 100%;
+}
+.vue-notification-wrapper {
+  .vue-notification {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .notification-title {
+      font-size: 18px;
+    }
+    .notification-content {
+      font-size: 15px;
+    }
+  }
 }
 </style>
