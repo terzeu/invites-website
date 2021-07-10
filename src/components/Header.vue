@@ -1,12 +1,13 @@
 <template>
   <header :class="{ 'mobile' : mobile}" class="header-component">
-    <nav class="header-nav"> 
-      <h4>Formatura</h4>             
+    <nav class="header-nav">
+      <h5>Formatura</h5>        
       <font-awesome-icon icon="align-justify" class="icon" v-show="mobile" @click="toggleHeaderMenu" /> 
       <ul v-show="isOpenHeaderMenu" :class="{ 'open': isOpenHeaderMenu }" class="header-ul">
-        <li><a href="#home-page" class="header-link">Inicio</a></li>
-        <li><a href="#location-start" class="header-link">Local</a></li>
-        <li><a href="#confirm-presence" class="header-link">Confirmar Presença</a></li>
+        <li><a @click="toggleHeaderMenu" href="#home-page" class="header-link">Inicio</a></li>
+        <li><a @click="toggleHeaderMenu" href="#location-start" class="header-link">Local</a></li>
+        <li><a @click="toggleHeaderMenu" href="#confirm-presence" class="header-link">Confirmar presença</a></li>
+        <li><a @click="toggleHeaderMenu" href="#obs-start" class="header-link">Observações</a></li>
       </ul>
     </nav>
   </header>
@@ -20,7 +21,7 @@ export default {
   data() {  
     return {
       mobile: false,
-      isOpenHeaderMenu: true, 
+      isOpenHeaderMenu: true
     }
   },
   created() {
@@ -29,16 +30,18 @@ export default {
   },
   methods: {
     toggleHeaderMenu() {
-      this.isOpenHeaderMenu = !this.isOpenHeaderMenu       
-      },  
+      if (this.mobile) {
+        this.isOpenHeaderMenu = !this.isOpenHeaderMenu
+      }
+    },
     checkScreen() {
-      this.windowWidth = window.innerWidth;
+      this.windowWidth = window.innerWidth
       if (this.windowWidth <= 750) {
         this.mobile = true
       } else {
         this.mobile = false
         this.isOpenHeaderMenu = true
-      }
+      }     
     }
   }
 }
@@ -50,6 +53,7 @@ export default {
   width: 100%;
   background: rgba(255, 192, 203, 0.884);  
   font-size: 25px;
+  transition: all 0.5s;
   .header-nav {
     display: flex;
     justify-content: space-around;  
@@ -87,7 +91,7 @@ export default {
     font-size: 33px;
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 20px;
     margin-top: 15px;
     display: block;
     cursor: pointer;   
@@ -96,9 +100,12 @@ export default {
     text-align: center;
     flex-direction: column;      
     &.open {
-      height: 130px;
+      height: 170px;
     }
   }
 }
 }
 </style>
+
+
+
