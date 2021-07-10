@@ -1,12 +1,12 @@
 <template>
   <header :class="{ 'mobile' : mobile}" class="header-component">
-    <nav class="header-nav"> 
-      <h5>Formatura</h5>             
+    <nav class="header-nav">
+      <h5>Formatura</h5>        
       <font-awesome-icon icon="align-justify" class="icon" v-show="mobile" @click="toggleHeaderMenu" /> 
       <ul v-show="isOpenHeaderMenu" :class="{ 'open': isOpenHeaderMenu }" class="header-ul">
-        <li><a @click="toggleHeaderMenu" href="#home-page" class="header-link">inicio</a></li>
-        <li><a @click="toggleHeaderMenu" href="#location-start" class="header-link">local</a></li>
-        <li><a @click="toggleHeaderMenu" href="#confirm-presence" class="header-link">confirmar presença</a></li>
+        <li><a @click="toggleHeaderMenu" href="#home-page" class="header-link">Inicio</a></li>
+        <li><a @click="toggleHeaderMenu" href="#location-start" class="header-link">Local</a></li>
+        <li><a @click="toggleHeaderMenu" href="#confirm-presence" class="header-link">Confirmar presença</a></li>
         <li><a @click="toggleHeaderMenu" href="#obs-start" class="header-link">Observações</a></li>
       </ul>
     </nav>
@@ -21,7 +21,7 @@ export default {
   data() {  
     return {
       mobile: false,
-      isOpenHeaderMenu: true,
+      isOpenHeaderMenu: true
     }
   },
   created() {

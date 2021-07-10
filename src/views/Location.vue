@@ -1,6 +1,6 @@
 <template>
 <div id = "location-start" class="location-start">
-  <h2 class="main-title">ONDE VAI SER</h2>
+  <h2 class="main-title">Onde vai ser</h2>
   <div class="location-page">
     <div class="location-info">
       <div class="location-data info-blocks">
@@ -43,15 +43,14 @@ export default {
   color: rgb(223, 223, 223);
   font-size: 33px;
   text-shadow: 2px 3px 5px black;
-  height: 100%;
-  background: no-repeat center/cover url('../assets/images/woodflag.jpg');
+  min-height: 100vh;
+  background: center/cover url('../assets/images/woodflag.jpg');
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-top: 102.28px;
   .main-title{
     font-family: 'sofia';
-    font-size: 64px;
     margin-bottom: 60px;
   }
   .location-page {
@@ -59,6 +58,8 @@ export default {
     font-size: 30px;
     justify-content: center;
     flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: 20px;
     .info-blocks {
       .text{
         margin-block: 0;
