@@ -13,7 +13,7 @@
         <h3 class="title">
           <font-awesome-icon icon="location-arrow" class="icon" />AONDE?
         </h3>
-        <p class="text">Hotel Fazenda Pirapitinga, Luziânia GO 061</p>
+        <p class="text">Hotel Fazenda Pirapitinga, Luziânia-GO</p>
       </div>
     </div>
     <div class="location-map info-blocks">
